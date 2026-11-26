@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueStore — Track order</title>
+<meta name="description" content="BlueStore — Sales &amp; Inventory Management System">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 9v14L16 30 4 23V9z' fill='%232563eb'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/i18n.js"></script>
+<script src="data.js"></script>
+<script src="js/core.js"></script>
+</head>
+<body>
+<main class="wrap" id="main">
+  <h2 data-i18n="tr_h"></h2>
+  <p class="sub" data-i18n="tr_sub"></p>
+  <div class="panel">
+    <form class="bar" id="tform" style="margin-bottom:0" novalidate>
+      <input id="code" maxlength="40" data-i18n-ph="tr_ph" data-i18n-aria="tr_ph" style="flex:1;max-width:360px" autocomplete="off" spellcheck="false">
+      <button class="btn" type="submit" data-i18n="tr_btn"></button>
+    </form>
+    <div id="result" style="margin-top:18px" aria-live="polite"></div>
+  </div>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/track.js"></script>
+</body>
+</html>

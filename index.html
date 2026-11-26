@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueStore</title>
+<meta name="description" content="BlueStore — Sales &amp; Inventory Management System">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 9v14L16 30 4 23V9z' fill='%232563eb'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/i18n.js"></script>
+<script src="data.js"></script>
+<script src="js/core.js"></script>
+</head>
+<body>
+<main class="wrap" id="main">
+  <header class="hero">
+    <div>
+      <h1 data-i18n="shop_h1"></h1>
+      <p data-i18n="shop_lead"></p>
+      <div class="stats" id="heroStats"></div>
+    </div>
+    <div class="stage" id="stage" aria-hidden="false"></div>
+  </header>
+
+  <section id="products">
+    <h2 data-i18n="shop_products"></h2>
+    <p class="sub" data-i18n="shop_products_sub"></p>
+    <div class="bar">
+      <input id="q" type="search" data-i18n-ph="shop_search" data-i18n-aria="shop_search" maxlength="60" autocomplete="off">
+      <select id="sort" data-i18n-aria="shop_sort">
+        <option value="qty" data-i18n="sort_qty_desc"></option>
+        <option value="qa" data-i18n="sort_qty_asc"></option>
+        <option value="pd" data-i18n="sort_price_desc"></option>
+        <option value="pa" data-i18n="sort_price_asc"></option>
+        <option value="orders" data-i18n="sort_orders"></option>
+      </select>
+    </div>
+    <div class="bar">
+      <span class="lbl" data-i18n="shop_price_range"></span>
+      <div class="tiers" id="tiers"></div>
+      <span class="spacer"></span>
+      <label class="meta" for="pmin" data-i18n="f_min"></label><input id="pmin" type="number" min="0" step="0.01" style="width:96px" aria-label="min">
+      <label class="meta" for="pmax" data-i18n="f_max"></label><input id="pmax" type="number" min="0" step="0.01" style="width:96px" aria-label="max">
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="bar" style="justify-content:center;margin-top:22px">
+      <span class="meta" id="count"></span>
+      <button class="btn ghost" id="more" type="button" data-i18n="btn_more"></button>
+    </div>
+  </section>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

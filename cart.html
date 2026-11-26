@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueStore — Cart</title>
+<meta name="description" content="BlueStore — Sales &amp; Inventory Management System">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 28 9v14L16 30 4 23V9z' fill='%232563eb'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/i18n.js"></script>
+<script src="data.js"></script>
+<script src="js/core.js"></script>
+</head>
+<body>
+<main class="wrap" id="main">
+  <h2 data-i18n="cart_h"></h2>
+  <p class="sub" data-i18n="cart_sub"></p>
+  <div class="note" id="localNote" style="margin-bottom:18px"></div>
+  <div id="cartView" class="cartlay">
+    <div class="panel"><div id="lines"></div></div>
+    <form class="panel" id="form" novalidate autocomplete="on">
+      <h3 data-i18n="co_h"></h3>
+      <div class="field"><label for="cname" data-i18n="co_name"></label><input id="cname" name="name" required maxlength="60" autocomplete="name"></div>
+      <div class="row">
+        <div class="field"><label for="ccountry" data-i18n="co_country"></label><select id="ccountry" name="country"></select></div>
+        <div class="field"><label for="ccity" data-i18n="co_city"></label><input id="ccity" name="city" maxlength="60" autocomplete="address-level2"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="cphone" data-i18n="co_phone"></label><input id="cphone" name="phone" maxlength="25" inputmode="tel" autocomplete="tel"></div>
+        <div class="field"><label for="cmail" data-i18n="co_email"></label><input id="cmail" name="email" type="email" maxlength="80" autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="caddr" data-i18n="co_address"></label><textarea id="caddr" name="address" maxlength="200" autocomplete="street-address"></textarea></div>
+      <div class="field"><label for="cnote" data-i18n="co_note"></label><input id="cnote" name="note" maxlength="120"></div>
+      <div id="sumBox"></div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn teal" id="submit" type="submit" style="width:100%" data-i18n="co_submit"></button>
+    </form>
+  </div>
+  <div id="receiptView" hidden></div>
+</main>
+<script src="js/ui.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
